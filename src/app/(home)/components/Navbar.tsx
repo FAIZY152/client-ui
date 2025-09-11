@@ -1,4 +1,11 @@
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { Phone } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -7,7 +14,7 @@ const Navbar = () => {
   return (
     <div>
       <header className="bg-white">
-        <nav className="container py-5 flex items-center justify-between">
+        <nav className="container max-w-7xl mx-auto py-5 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href={"/"}>
               <svg
@@ -30,6 +37,15 @@ const Navbar = () => {
                 />
               </svg>
             </Link>
+            <Select defaultValue={""}>
+              <SelectTrigger className="w-[180px] focus:ring-0">
+                <SelectValue placeholder="Select Restaurant" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="1">Pizza Hut</SelectItem>
+                <SelectItem value="2">KFC</SelectItem>
+              </SelectContent>
+            </Select>
             {/* <TenantSelect restaurants={restaurants} /> */}
           </div>
           <div className="flex items-center gap-x-4">
