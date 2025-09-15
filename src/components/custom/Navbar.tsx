@@ -13,7 +13,7 @@ import React from "react";
 const Navbar = () => {
   return (
     <div>
-      <header className="bg-white">
+      <header className="bg-gray-50">
         <nav className="container max-w-7xl mx-auto py-5 flex items-center justify-between">
           <div className="flex items-center space-x-4">
             <Link href={"/"}>
